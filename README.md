@@ -1,7 +1,7 @@
  # Setup-kubernetes-cluster
  ## Launch 3 EC2 servers.
  ## Configure first as a master node and the other two as a slave.
- ## Deploy one WordPress website using deployment kind.
+ ## Deploy one WordPress website 
  
  # Addition
 ``` Attach persistent volume over the DB ``` 
@@ -98,7 +98,7 @@ kubectl get nodes
 ![image](https://user-images.githubusercontent.com/67600604/178670808-10a16798-cef5-45cc-a5c2-f38b269818d0.png)
 
 
-## Step 3 - Deploy one WordPress website using deployment kind.
+## Step 3 - Deploy one WordPress website
 
 Now, for the wordpress, we will need a database , so here we are using mysql database
 
