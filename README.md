@@ -136,3 +136,39 @@ kubectl get svc
 kubectl get pv
 
 ![image](https://user-images.githubusercontent.com/67600604/178676488-5ecd9902-b20f-4d0f-a36b-d2453db31034.png)
+
+
+Note - if you are not able to see the nodes in the slave but able to see in ready state in master node , then run the below command in both the slaves - 
+
+``` export KUBECONFIG=/etc/kubernetes/kubelet.conf ```
+ 
+and then you will be able to see the nodes in the slaves as well 
+
+```
+kubectl config view 
+kubectl get nodes 
+```
+
+![image](https://user-images.githubusercontent.com/67600604/178986274-72d8cff6-db9d-4a42-b98a-779ee29e6441.png)
+
+![image](https://user-images.githubusercontent.com/67600604/178986366-a75ee078-c49c-4d7e-95e2-9010861d4bf2.png)
+
+But this will be the temporary solution, we will again not able to see these after the restart so there is a file named as rc.d , we will add the same command in the file , so that it will automatically runs after the restart
+
+```
+cd /etc/rc.d/
+ls
+vim rc.local
+```
+
+![image](https://user-images.githubusercontent.com/67600604/178987061-e12217bc-951b-4f53-b183-96a395179cc2.png)
+
+after that , give the permission to run this 
+
+``` chmod +x rc.local ```
+
+THANK YOU 
+
+SHRUTI VIJ
+
+
